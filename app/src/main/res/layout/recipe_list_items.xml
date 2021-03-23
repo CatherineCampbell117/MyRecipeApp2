@@ -5,38 +5,32 @@
     android:orientation="horizontal"
     android:padding="5dip" >
 
-    <!-- Left Aligns the Place Image -->
-    <LinearLayout android:id="@+id/thumbnail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dip"
+    <!-- Left Aligns the Recipe Image -->
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="49dp"
+        android:layout_height="50dp"
         android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
         android:layout_marginRight="5dip"
+        android:layout_marginTop="10dip"
         android:orientation="vertical">
 
-<!--        <ImageView-->
-<!--            android:id="@+id/entry_location_icon"-->
-<!--            android:layout_width="50dip"-->
-<!--            android:layout_height="50dip"-->
-<!--            android:src="@drawable/flag" />-->
+        <ImageView
+            android:id="@+id/entry_location_icon"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/caramel_brownie" />
     </LinearLayout>
 
-    <!-- Place name -->
+    <!-- Recipe name -->
     <TextView
         android:id="@+id/entry_location_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/thumbnail"
-        android:layout_toRightOf="@+id/thumbnail"
-        android:text="Lasagne"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <!-- Arrow image, indicates to the user that clicking the item will do something -->
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:src="@drawable/page_next_outline"-->
-<!--        android:layout_alignParentRight="true"-->
-<!--        android:layout_centerVertical="true" />-->
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="12dp"
+        android:textSize="21sp"
+        android:textStyle="normal"/>
 </RelativeLayout>

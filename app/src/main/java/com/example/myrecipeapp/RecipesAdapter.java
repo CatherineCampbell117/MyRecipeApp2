@@ -13,6 +13,7 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesHolder> {
     private final List<Recipe> recipes;
     private Context context;
     private int itemResource;
+    private RecyclerViewClickListener listener;
 
     public RecipesAdapter(Context context, int itemResource, List<Recipe> recipes) {
 
@@ -20,6 +21,7 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesHolder> {
         this.context = context;
         this.itemResource = itemResource;
     }
+
     @Override
     public RecipesHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -39,8 +41,10 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesHolder> {
     }
 
     @Override
-    public int getItemCount() {
-        return this.recipes.size();
+    public int getItemCount() { return this.recipes.size(); }
+
+    public interface RecyclerViewClickListener{
+        void onClick(View v, int position);
     }
 
 }

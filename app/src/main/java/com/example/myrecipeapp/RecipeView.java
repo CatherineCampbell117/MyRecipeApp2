@@ -28,7 +28,7 @@ public class RecipeView extends AppCompatActivity {
         System.out.println(recipes);
         // Initialize the Places adapter, which binds the data to the entry view
         RecipesAdapter adapter =
-                new RecipesAdapter(this, R.layout.recipe_entry, recipes);
+                new RecipesAdapter(this, R.layout.recipe_list_items, recipes);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
 
@@ -47,12 +47,15 @@ public class RecipeView extends AppCompatActivity {
 
         Recipe lasagne = new Recipe(
                 "Lasagne");
+        lasagne.setImagesource("lasagne.jpg");
 
         Recipe caramel_brownies = new Recipe(
                 "Caramel Brownies");
+        caramel_brownies.setImagesource("caramel_brownie.jpg");
 
         Recipe thai_beef_rice = new Recipe(
                 "Thai Beef Rice");
+        thai_beef_rice.setImagesource("thai_beef_rice.jpeg");
 
         recipes.add(lasagne);
         recipes.add(caramel_brownies);
